@@ -9,6 +9,6 @@ export class Posting {
     releasedDate: Date;
     location: string;
     company: Company;
-    jobAd: JobAd;
+    jobAd?: JobAd;
     type: PostingType;
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PostingsListService } from '../services/postings-list.service';
 import { Posting } from 'shared/models/Posting.model';
 import { PostingType } from 'shared/enums/PostingType.enum';
+import { FormGroup, FormControl } from '@angular/forms';
+import { distinctUntilChanged, debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-postings-list',
@@ -13,11 +15,30 @@ export class PostingsListComponent implements OnInit {
   postings: Posting[] = [];
   postingsView: Posting[] = [];
 
+  companyForm: FormGroup = new FormGroup({
+    companyName: new FormControl('SmartRecruiters')
+  })
+
   constructor(private service: PostingsListService) { }
 
   ngOnInit() {
-    this.postings = this.service.getAll();
-    this.postingsView = [...this.postings];
+    this.fetchData();
+
+    this.companyForm.get('companyName').valueChanges.pipe(
+      distinctUntilChanged(),
+      debounceTime(500)
+    ).subscribe((companyName: string) => {
+      this.fetchData(companyName)
+    })
+  }
+
+  fetchData(companyName: string = 'SmartRecruiters') {
+    this.service.getAll(companyName).subscribe(
+      values => {
+        this.postings = values;
+        this.postingsView = [...values];
+      }
+    )
   }
 
   filterByPublic() {
@@ -25,7 +46,11 @@ export class PostingsListComponent implements OnInit {
   }
 
   filterByReallyOld() {
-
+    this.postingsView = this.postings.filter(x => {
+      const timeDiff = Math.abs(new Date().getTime() - x.releasedDate.getTime());
+      const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+      return diffDays > 5;
+    })
   }
 
   filterByJobFilledJobDesc() {

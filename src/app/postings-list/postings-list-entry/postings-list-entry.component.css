@@ -1,7 +1,8 @@
 .postings-list-entry {
     display: block;
-    width: 400px;
-    background: #efefef;
+    width: 600px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #fbfbfb;
     margin: 5px;
     padding: 5px;
 }
