@@ -6,9 +6,9 @@ Not all the features have to be developed internally - sometimes we want to outs
 
 ## Goal
 
-1. Install `<packagename>` package via npm
-2. Import `PostingsListFilteringModule` from newly installed package to your application
-3. Use `<app-postings-list-filters></app-postings-list-filters>` component to handle filtering. 
+1. Install `ngx-postings-filters` package via npm
+2. Import `PostingsFiltersModule` from newly installed package to your application
+3. Use `<lib-postings-filters></lib-postings-filters>` component to handle filtering. 
 
     `PostingsListFiltersComponent` emits following events:
     - `filterPublic` - display public postings
