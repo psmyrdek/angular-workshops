@@ -1,5 +1,8 @@
 <div class="postings-list">
   <h1>Postings List</h1>
-  <app-postings-list-entry *ngFor="let posting of postings" [posting]="posting"></app-postings-list-entry>
+  <button style="display: block; margin: 5px;" (click)="resetFilters()">Reset filters</button>
+  <h2>Filters</h2>
+  <lib-postings-filters (filterPublic)="filterByPublic()" (filterReallyOld)="filterByReallyOld()" (filterFilledJobDescription)="filterByJobFilledJobDesc()"></lib-postings-filters>
+  <app-postings-list-entry *ngFor="let posting of postingsView" [posting]="posting"></app-postings-list-entry>
 </div>
 
