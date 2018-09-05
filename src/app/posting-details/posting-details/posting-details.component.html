@@ -1,8 +1,11 @@
-<div>
+<a [routerLink]="'/list'">
+  <button>Back to list</button>
+</a>
+<div class="posting-details" *ngIf="posting">
   <small>
     {{posting.company.name}}
   </small>
-  <div class="posting-entry-body">
+  <div class="posting-body">
     <p>
       {{posting.id}} - {{posting.name}}
     </p>

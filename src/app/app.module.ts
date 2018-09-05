@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { PostingsListModule } from './postings-list/postings-list.module';
 import { PostingDetailsModule } from './posting-details/posting-details.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import { PostingDetailsModule } from './posting-details/posting-details.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     PostingsListModule,
     PostingDetailsModule,
-    HttpClientModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
