@@ -6,7 +6,7 @@ Navigating from list to posting details is not available. To make our app easy t
 
 ## Goal
 
-1. Create additional module for root routing configuration called `app-routing.module.ts`. Import `RoutingModule` and configure it in a way that opening both `PostingsListComponent` and `PostingDetailsComponent` is possible.
+1. Create additional module for root routing configuration called `app-routing.module.ts`. Import `RouterModule` and configure it in a way that opening both `PostingsListComponent` and `PostingDetailsComponent` is possible.
 2. Use `RouterOutlet` directive to display routes content in main template of your application.
 3. Use `RouterLink` directive inside of `PostingsListEntryComponent` template to support links to posting details.
 4. In `posting-details` module fetch data about given posting and display it.
