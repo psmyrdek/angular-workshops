@@ -20,3 +20,6 @@ Navigating from list to posting details is not available. To make our app easy t
 - https://angular.io/api/router/RouterLink
 - https://angular.io/api/router/ActivatedRoute
 - https://angular.io/guide/http
+
+## API:
+- https://api.smartrecruiters.com/v1/companies/:company/postings/:id
