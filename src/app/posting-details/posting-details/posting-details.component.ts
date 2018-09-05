@@ -12,6 +12,7 @@ import { switchMap } from 'rxjs/operators';
 export class PostingDetailsComponent implements OnInit {
 
   posting: Posting;
+  detailsMode: string = 'preview';
 
   constructor(private service: PostingDetailsService, private route: ActivatedRoute) { }
 
@@ -22,6 +23,10 @@ export class PostingDetailsComponent implements OnInit {
     .subscribe((posting: Posting) => {
       this.posting = posting;
     })
+  }
+
+  setMode(mode: string) {
+    this.detailsMode = mode;
   }
 
 }

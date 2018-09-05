@@ -21,7 +21,11 @@ export class PostingDetailsService {
         refNumber: response.refNumber,
         releasedDate: new Date(response.releasedDate),
         location: response.location.city,
-        company: response.company,
+        company: {
+          identifier: response.company.identifier,
+          name: response.company.name,
+          description: response.jobAd.sections.companyDescription.text
+        },
         jobAd: {
           jobDescription: response.jobAd.sections.jobDescription.text
         },

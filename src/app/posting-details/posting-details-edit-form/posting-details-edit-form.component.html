@@ -1,0 +1,16 @@
+<form [formGroup]="postingForm" class="posting-form" (submit)="onFormSubmit()">
+  <label for="name" class="form-label">
+    Job name
+    <input type="text" name="name" formControlName="name" class="form-element">
+    <p class="form-error-msg" *ngIf="postingForm.controls.name.errors?.required">Job name cannot be empty!</p>
+  </label>
+  <label for="jobDesc" class="form-label">
+    Job Description
+    <textarea rows="5" name="jobDesc" formControlName="jobDescription" class="form-element"></textarea>
+  </label>
+  <label for="companyDesc" class="form-label">
+    Company Description
+    <textarea rows="5" name="companyDesc" formControlName="companyDescription" class="form-element"></textarea>
+  </label>
+  <button type="submit" [disabled]="postingForm.status === 'INVALID'">Save!</button>
+</form>
