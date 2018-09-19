@@ -1,0 +1,16 @@
+<div class="buttons-group">
+  <a [routerLink]="'/list'">
+    <button>Back to list</button>
+  </a>
+  <div>
+    <button class="nav-button" (click)="setMode('edit')">Edit</button>
+    <button class="nav-button" (click)="setMode('preview')">Preview</button>
+  </div>
+</div>
+
+<ng-container *ngIf="posting">
+  <div [ngSwitch]="detailsMode">
+    <app-posting-details-preview *ngSwitchCase="'preview'" [posting]="posting"></app-posting-details-preview>
+    <app-posting-details-edit-form *ngSwitchCase="'edit'" [posting]="posting"></app-posting-details-edit-form>
+  </div>
+</ng-container>

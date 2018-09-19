@@ -1,0 +1,12 @@
+.buttons-group {
+    margin: 15px;
+    width: 610px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.nav-button {
+    margin-left: 10px;
+    width: 100px;
+}

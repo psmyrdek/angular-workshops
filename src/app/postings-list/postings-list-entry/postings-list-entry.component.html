@@ -6,6 +6,9 @@
     <p>
       {{posting.id}} - {{posting.name}}
     </p>
+    <a [routerLink]="['/details', posting.company.identifier, posting.id]" class="posting-link">
+      <p>Read more</p>
+    </a>
   </div>
   <small>
     {{posting.location}}

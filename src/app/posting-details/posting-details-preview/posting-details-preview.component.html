@@ -1,0 +1,17 @@
+<div class="posting-details">
+  <small>
+    {{posting.company.name}}
+  </small>
+  <div class="posting-body">
+    <p>
+      {{posting.id}} - {{posting.name}}
+    </p>
+  </div>
+  <h3 *ngIf="posting.company.description">Company Description</h3>
+  <div [innerHTML]="posting.company.description"></div>
+  <h3>Job Description</h3>
+  <div [innerHTML]="posting.jobAd.jobDescription"></div>
+  <p>
+    Where: <b>{{posting.location}}</b>
+  </p>
+</div>
