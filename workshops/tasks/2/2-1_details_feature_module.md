@@ -7,11 +7,11 @@ List itself is not so interesting. Sometimes we want to learn more about details
 ## Goal
 
 1. Create "postings-details" feature module
-2. Create `PostingsDetailsComponent` - container for the whole page
+2. Create `DetailsComponent` - container for the whole page
 3. Create `PostingsDetailsService` with one method - `get()`. Create dummy instance of `Posting` type and return it from this method.
-4. Use your newly created service to present `Posting` details in `PostingsDetailsComponent` template.
+4. Use your newly created service to present `Posting` details in `DetailsComponent` template.
 
-(For debug purposes replace `app-postings-list` with `app-postings-details` in `app.component.html` to check if everything works fine)
+(For debug purposes replace `app-list` with `app-details` in `app.component.html` to check if everything works fine)
 
 ## Resources
 

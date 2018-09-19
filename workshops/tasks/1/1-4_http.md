@@ -19,4 +19,4 @@ Dummy data is fine only in prototyping phase. Let's turn our prototype into real
 - https://angular.io/guide/observables-in-angular#http
 
 ## API:
-- https://api.smartrecruiters.com/v1/companies/:company/postings
+- https://api.smartrecruiters.com/v1/companies/:companyIdentifier/postings
