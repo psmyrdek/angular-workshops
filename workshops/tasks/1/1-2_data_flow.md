@@ -15,17 +15,17 @@ Previously created elements cannot live without each other. It's time to compose
 +------ | ------+ List
 |       V       |
 |               |
-| [ ListEntry ] |
-| [ ListEntry ] |
-| [ ListEntry ] |
-| [ ListEntry ] |
-| [ ListEntry ] |
+|   [ Entry ]   |
+|   [ Entry ]   |
+|   [ Entry ]   |
+|   [ Entry ]   |
+|   [ Entry ]   |
 +---------------+
 ```
 
 2. Get the dummy data from service and make it available for children components.
-3. Update `PostingsListComponent` template to render set of `PostingsListEntryComponent` created previously.
-4. Make the entries deletable. Let the `PostingsListEntryComponent` emit proper event after clicking a 'Remove' button and let `PostingsListComponent` handle it.
+3. Update `ListComponent` template to render set of `EntryComponent`s created previously.
+4. Make the entries deletable. Let the `EntryComponent` emit proper event after clicking a 'Remove' button and let `ListComponent` handle it.
 
 ## Resources
 

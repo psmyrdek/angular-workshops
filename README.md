@@ -23,4 +23,7 @@ Each task is described in a following way:
 
 ## Can't get to the working solution?
 
-See `tasks/how_to` directory. It contains a list of helpful tips for everywhone who is stuck during solving the challenges.
+See `workshops/tasks/how_to` directory. It contains a list of helpful tips for everywhone who is stuck during solving the challenges.
+
+## API:
+- https://api.smartrecruiters.com/v1/companies/:company/postings/:id
